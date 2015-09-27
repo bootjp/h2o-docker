@@ -7,8 +7,8 @@ RUN dnf install -y h2o php7-php-cgi php7-php-opcache && dnf clean all
 EXPOSE 80 443
 
 ADD ./h2o.conf /etc/h2o/h2o.conf
-ADD ./data/ /n/app/
-ADD ./keys/  /var/tmp/keys/
+ADD ./data/ /webapp
+ADD ./keys/ /var/tmp/keys/
 RUN  chown -R root:root /var/tmp/keys/
 
 CMD /usr/bin/h2o -c /etc/h2o/h2o.conf
