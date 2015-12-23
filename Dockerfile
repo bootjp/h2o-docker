@@ -2,7 +2,7 @@ FROM fedora:22
 
 MAINTAINER oh@bootjp.me
 
-RUN dnf install -y https://bitbucket.org/kjdev/fc22-rpms/raw/master/RPMS/noarch/kjdev-release-22-1.fc22.kjdev.noarch.rpm https://bitbucket.org/kjdev/fc22-rpms/raw/master/RPMS/noarch/kjdev-release-scl-22-1.fc22.kjdev.noarch.rpm && dnf clean all
+RUN dnf install -y https://bitbucket.org/kjdev/fc22-rpms/raw/master/RPMS/x86_64/kjdev-release-22-1.fc22.kjdev.noarch.rpm https://bitbucket.org/kjdev/fc22-rpms/raw/master/RPMS/x86_64/kjdev-release-scl-22-1.fc22.kjdev.noarch.rpm && dnf clean all
 RUN dnf install -y h2o php7-php-cgi php7-php-opcache && dnf clean all
 
 EXPOSE 80 443
